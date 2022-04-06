@@ -3,10 +3,11 @@ Feature: Reset functionality on login page of Application
 
   Scenario Outline: Verification textBox elements
     Given Open the browser and launch the application
-    When select textbox element
-    And Enter the <fullName> and <email> and <currentAddress> and <permanentAddress>
-    And Click in submit
+    When search <word>
+    And click <result>
+    And searching in wikipedia <wikipediaWord>
+    And select <externalLink>
     Then show data
     Examples:
-    |fullName|email|currentAddress|permanentAddress|
-    |kimberly|kim@gmail.com|ciudad|Guatemala|
+    |word|result|wikipediaWord|externalLink|
+    |wikipedia.com|https://www.wikipedia.com/|Selenium|https://www.tutorialdeprogramacion.com/2019/08/tutorial-python-con-selenium.html|
